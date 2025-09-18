@@ -17,7 +17,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-
 def page_main():
     c1,c2,c3 = st.columns([1,7,1])
     with c2:
