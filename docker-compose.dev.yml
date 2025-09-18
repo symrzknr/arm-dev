@@ -6,5 +6,6 @@ services:
     ports:
       - "8501:8501"
     volumes:
+      - .:/home/app          # live code updates
       - ./src:/home/app/src          # live code updates
       - ./.streamlit:/home/app/.streamlit  # live theme/config updates

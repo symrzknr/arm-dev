@@ -1,11 +1,13 @@
 import streamlit as st
 import pandas as pd
-import style
-import text
-import icon
+
+
 import json
-from project_render import project
-from footer import footer
+from src.project_render import project
+from src.footer import footer
+import src.style as style
+import src.text as text
+import src.icon as icon
 
 
 st.set_page_config(
@@ -125,3 +127,4 @@ pages = {
 pg = st.navigation(pages, position = "sidebar")
 
 pg.run()
+

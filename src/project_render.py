@@ -1,8 +1,8 @@
 import streamlit as st
-import icon
+from src.icon import shields_badge
 import copy
 from random import randrange
-from business_badges import badges
+from src.business_badges import badges
 
 colors = ["red", "green", "yellow", "blue", "orange", "violet", "gray"]
 
@@ -43,7 +43,7 @@ def project(p):
                 ):
 
             for tech in p["technologies"]:
-                        icon.shields_badge(
+                        shields_badge(
                             tech,
                             logo=tech,
                             width=None,
