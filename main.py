@@ -75,16 +75,25 @@ def page_main():
                     unsafe_allow_html=True
                 )
             
-            fig_w = st.empty()
-            cc1, cc2, cc3 = st.columns([1,1,1])
+            
+            cc1, cc2 = st.columns([8,1])
             with cc1:
-                x_axis = st.selectbox('x-axis', ['year', 'month', 'technologies', 'business_fields'])
+                fig_w = st.empty()
+                
             with cc2:
-                y_axis = st.selectbox('y-axis', ['year', 'month', 'technologies', 'business_fields'])
-            with cc3:
-                color = st.selectbox('color', ['year', 'month', 'technologies', 'business_fields'])
-            fig = get_heatmap_data(df, x_axis, y_axis, color)
-            fig_w.write(fig)
+                st.write(" ")
+                st.write(" ")
+                st.write(" ")
+                st.write(" ")
+                x_axis = st.selectbox('x-axis', ['year', 'month', 'technologies', 'business_fields', 'role', 'sector'], index = 0)
+                y_axis = st.selectbox('y-axis', ['year', 'month', 'technologies', 'business_fields', 'role', 'sector'], index = 1)
+                color = st.selectbox('color', ['year', 'month', 'technologies', 'business_fields', 'role', 'sector'], index = 2)
+
+                if x_axis == y_axis or x_axis == color or y_axis == color:
+                    fig_w.info("Selections must be different")
+                else:
+                    fig = get_heatmap_data(df, x_axis, y_axis, color)
+                    fig_w.write(fig)
 
             st.markdown(
                     """

@@ -6,11 +6,11 @@ def get_heatmap_data(df, x, y, c):
     for col in [x,y,c]:
         if col in df.columns:
             df = df.explode(col)
-    if 'year' in [x,y,c] or 'month' in [x,y,z]:
+    if 'year' in [x,y,c] or 'month' in [x,y,c]:
         df = df.explode("dates")
 
-    df["year"] = df["dates"].str[0:4].astype(int)
-    df["month"] = df["dates"].str[5:7].astype(int)
+        df["year"] = df["dates"].str[0:4].astype(int)
+        df["month"] = df["dates"].str[5:7].astype(int)
 
     counts = (
         df.groupby([x,y,c])["name"]
@@ -64,6 +64,11 @@ def get_heatmap_data(df, x, y, c):
         paper_bgcolor="#192130",
         margin=dict(l=80, r=80, t=60, b=60),
         font=dict(color="white")
+    )
+
+    fig.update_layout(
+        autosize=True,  # let Plotly fill the available space
+        height=None,    # remove fixed height
     )
 
     return fig
