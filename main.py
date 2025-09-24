@@ -1,14 +1,13 @@
 import streamlit as st
 import pandas as pd
-
-
 import json
 from src.project_render import project
+from src.plotly_plots import get_heatmap_data
+from src.projects_data import get_project_df
 from src.footer import footer
 import src.style as style
 import src.text as text
 import src.icon as icon
-
 
 st.set_page_config(
     page_title="arm-dev",
@@ -17,7 +16,11 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+
 def page_main():
+
+    df = get_project_df()
+    
     c1,c2,c3 = st.columns([1,7,1])
     with c2:
         with st.container(
@@ -53,8 +56,8 @@ def page_main():
                 with st.container(
                     horizontal = False,
                 ):
-                    icon.st_link_button("https://github.com", "./src/media/linkedin.png", width=36)
-                    icon.st_link_button("https://github.com", "./src/media/sobre.png", width=36)
+                    icon.st_link_button("https://www.linkedin.com/in/arm2eu", "./src/media/linkedin.png", width=36)
+                    icon.st_link_button("mailto:arm2eu@gmail.com", "./src/media/sobre.png", width=36)
                 
 
             st.markdown(
@@ -66,7 +69,27 @@ def page_main():
                         I have +8 years of professional experience in <span style="color:orange;">business intelligence</span> and <span style="color:orange;">automation</span> projects in international environments, translating business requirements into analytical solutions and strategies.
                     </p>
                     <p style="font-size:18px;">
-                        I'm currently working in Santander Group bank, where I perform as a senior risk data analyst focusing on data strategy.
+                        I've led projects and teams with a strong focus on <span style="color:orange;">business alignment</span> and clear communication. My commitment, responsibility, and <span style="color:orange;">versatility</span> ensure that every initiative delivers real value, making a meaningful difference in outcomes.
+                    </p>
+                    """,
+                    unsafe_allow_html=True
+                )
+            
+            fig_w = st.empty()
+            cc1, cc2, cc3 = st.columns([1,1,1])
+            with cc1:
+                x_axis = st.selectbox('x-axis', ['year', 'month', 'technologies', 'business_fields'])
+            with cc2:
+                y_axis = st.selectbox('y-axis', ['year', 'month', 'technologies', 'business_fields'])
+            with cc3:
+                color = st.selectbox('color', ['year', 'month', 'technologies', 'business_fields'])
+            fig = get_heatmap_data(df, x_axis, y_axis, color)
+            fig_w.write(fig)
+
+            st.markdown(
+                    """
+                    <p style="font-size:18px;">
+                        After 5 years in KPMG, I'm currently working in Santander Group bank, where I perform as a senior risk data analyst focusing on data strategy at international level.
                     </p>
                     <p style="font-size:18px;">
                         Here are some of the technologies I like to work with:
@@ -82,7 +105,10 @@ def page_main():
                 gap = "medium",                
                 horizontal_alignment = "right",                
                 ):
-                tech_list = ['python', 'django', 'streamlit', 'pandas', 'plotly', 'dash', 'mysql', 'mongodb', 'postgresql', 'airflow', 'powerbi', 'aws', 'docker', 'openai', 'javascript', 'github', 'postman', 'jira']
+                
+                
+                tech_list = list(df.explode("technologies")["technologies"].unique())
+                tech_list += ["github"]
                 for tech in tech_list:
                     icon.shields_badge(
                         tech,
@@ -93,24 +119,58 @@ def page_main():
                         border_radius = 14,
                         background_color = "161C26",
                     )
-            
-            
+
+            # with st.container(
+            #     horizontal = True,
+            #     gap = "medium",                
+            #     horizontal_alignment = "right",                
+            #     ):
 
 def page_prof_projects():
-    
-    
-    with open("./src/projects.json", "r") as file:
-        data = json.load(file)
-    st.divider()
+
     c1,c2,c3 = st.columns([1,7,1])
     with c2:
+        
+        st.header(":material/rocket_launch: Professional Projects")
+        st.write("A Glimpse Into My Professional Work")
+        st.divider()
+
+        with open("./src/projects.json", "r") as file:
+            data = json.load(file)
+
+        for i,proj in enumerate(data):
+            project(data[str(i+1)])
+
+    st.caption("The project descriptions provided on this page are intentionally kept at a high level to protect sensitive information. Specific details, data, and proprietary methods are subject to professional Non-Disclosure Agreements (NDAs) and cannot be publicly shared. The summaries are intended solely to illustrate the nature of my work and experience without disclosing confidential or privileged material.")
+
+def page_freelance_projects():
+
+    c1,c2,c3 = st.columns([1,7,1])
+    with c2:
+        st.header(":material/diamond_shine: Freelance Projects")
+        st.write("An Overview Of My Freelance Work")
+        st.divider()
+
+        with open("./src/projects_freelance.json", "r") as file:
+            data = json.load(file)
+
         for i,proj in enumerate(data):
             project(data[str(i+1)])
 
     st.caption("The project descriptions provided on this page are intentionally kept at a high level to protect sensitive information. Specific details, data, and proprietary methods are subject to professional Non-Disclosure Agreements (NDAs) and cannot be publicly shared. The summaries are intended solely to illustrate the nature of my work and experience without disclosing confidential or privileged material.")
 
 def page_pers_projects():
-    st.write("")
+    c1,c2,c3 = st.columns([1,7,1])
+    with c2:
+        st.header(":material/interests: Personal Projects")
+        st.write("Some stuff I liked to build")
+        st.divider()
+
+        with open("./src/projects_personal.json", "r") as file:
+            data = json.load(file)
+
+        for i,proj in enumerate(data):
+            project(data[str(i+1)])
 
 footer()
 
@@ -120,6 +180,7 @@ pages = {
     ],
     "Projects": [
         st.Page(page_prof_projects, title="Professional", icon = ":material/rocket_launch:"),
+        st.Page(page_freelance_projects, title="Freelance", icon = ":material/diamond_shine:"),
         st.Page(page_pers_projects, title="Personal", icon = ":material/interests:"),
     ],
 }

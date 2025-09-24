@@ -27,4 +27,16 @@ badges = {
     "PMO":{
         "icon":":material/cases:",
     },
+    "IA":{
+        "icon":":material/memory:",
+    },
+    "Development":{
+        "icon":":material/code:",
+    },
+    "Economics":{
+        "icon":":material/credit_card:",
+    },
+    "Data":{
+        "icon":":material/data_array:",
+    },
 }
