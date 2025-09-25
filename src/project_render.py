@@ -14,7 +14,7 @@ def project(p):
     with c1:
         st.subheader(p["icon"] + " " + p["name"])
         st.write(p["objective"])
-        st.caption(p["role"] + ", :orange[" + p["sector"]+ "]")
+        st.caption(p["role"] + ", :orange[" + ' - '.join(p["sector"])+ "]")
         st.caption(p["year"]+ "/" + p["month"])
         with st.container(
                 horizontal = True,

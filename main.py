@@ -20,7 +20,7 @@ st.set_page_config(
 def page_main():
 
     df = get_project_df()
-    
+
     c1,c2,c3 = st.columns([1,7,1])
     with c2:
         with st.container(
@@ -85,9 +85,10 @@ def page_main():
                 st.write(" ")
                 st.write(" ")
                 st.write(" ")
-                x_axis = st.selectbox('x-axis', ['year', 'month', 'technologies', 'business_fields', 'role', 'sector'], index = 0)
-                y_axis = st.selectbox('y-axis', ['year', 'month', 'technologies', 'business_fields', 'role', 'sector'], index = 1)
-                color = st.selectbox('color', ['year', 'month', 'technologies', 'business_fields', 'role', 'sector'], index = 2)
+                color_opts = ['year', 'month', 'project_type', 'technologies', 'business_fields', 'role', 'sector']
+                x_axis = st.selectbox('x-axis', color_opts, index = 0)
+                y_axis = st.selectbox('y-axis', color_opts, index = 1)
+                color = st.selectbox('color', color_opts, index = 2)
 
                 if x_axis == y_axis or x_axis == color or y_axis == color:
                     fig_w.info("Selections must be different")

@@ -6,11 +6,11 @@
         "role": "Dev",
         "business": "Read ticker symbols from Yahoo of my personal investments (stock & etfs), as broker updates from my bank had a very low frequency (daily), allowing to monitor the market in real-time.",
         "technologies": ["python", "streamlit", "plotly"],
-        "sector": "Stock market",
+        "sector": ["Stock market"],
         "business_fields": ["Economics"],
         "year": "2021",
         "month": "10",
-        "dates": ["2022/01"]
+        "dates": ["2022/03"]
     },
     "2": {
         "icon": "🔍",
@@ -19,7 +19,7 @@
         "role": "Dev",
         "business": "Automated web scrapping in several job-sites to gather jobs that best matched my profile. Managed to get <span style='color:orange;'> an opportunity at ECB</span>.",
         "technologies": ["python", "postgresql"],
-        "sector": "Job search",
+        "sector": ["Job search"],
         "business_fields": ["Data"],
         "year": "2018",
         "month": "05",
@@ -32,7 +32,7 @@
         "role": "Dev",
         "business": "Generated a web scrapping script for coinbase that run in a scheduled manner and updated a database, calculating derivated indicators for each crypto-currency on a daily basis. This allowed to detect potential short-term growing cryptos. The best outcome was <span style='color:orange;'> detecting Dogecoin</span>.",
         "technologies": ["python", "postgresql"],
-        "sector": "Crypto",
+        "sector": ["Crypto"],
         "business_fields": ["Data", "Economics"],
         "year": "2017",
         "month": "12",
