@@ -3,39 +3,42 @@
         "icon": "📈",
         "name": "Savings portfolio monitoring",
         "objective": "",
-        "role": "Dev",
+        "role": "dev",
         "business": "Read ticker symbols from Yahoo of my personal investments (stock & etfs), as broker updates from my bank had a very low frequency (daily), allowing to monitor the market in real-time.",
         "technologies": ["python", "streamlit", "plotly"],
         "sector": ["Stock market"],
         "business_fields": ["Economics"],
         "year": "2021",
         "month": "10",
-        "dates": ["2022/03"]
+        "dates": ["2022/03"],
+        "company": "Personal"
     },
     "2": {
         "icon": "🔍",
         "name": "Job search automation",
         "objective": "",
-        "role": "Dev",
+        "role": "dev",
         "business": "Automated web scrapping in several job-sites to gather jobs that best matched my profile. Managed to get <span style='color:orange;'> an opportunity at ECB</span>.",
         "technologies": ["python", "postgresql"],
         "sector": ["Job search"],
         "business_fields": ["Data"],
         "year": "2018",
         "month": "05",
-        "dates": ["2018/01"]
+        "dates": ["2018/01"],
+        "company": "Personal"
     },
     "3": {
         "icon": "₿",
         "name": "Crypto monitoring",
         "objective": "Monitor crypto currencies and extract indicators for business opportunities",
-        "role": "Dev",
+        "role": "dev",
         "business": "Generated a web scrapping script for coinbase that run in a scheduled manner and updated a database, calculating derivated indicators for each crypto-currency on a daily basis. This allowed to detect potential short-term growing cryptos. The best outcome was <span style='color:orange;'> detecting Dogecoin</span>.",
         "technologies": ["python", "postgresql"],
         "sector": ["Crypto"],
         "business_fields": ["Data", "Economics"],
         "year": "2017",
         "month": "12",
-        "dates": ["2017/02"]
+        "dates": ["2017/02"],
+        "company": "Personal"
     }
 }

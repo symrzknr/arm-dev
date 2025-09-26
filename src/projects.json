@@ -3,27 +3,29 @@
         "icon": "👁️",
         "name": "Risk Reward Report",
         "objective": "Portfolio monitoring",
-        "role": "BI Analyst & Dev",
+        "role": "BI Analyst & dev",
         "business": "Aggregates all business units in Europe and America (15 units) to achieve credit loan portfolio monitoring evolution over time. This includes business volume, risk and finance KPI's and default ratios. Improved reporting and decision timing in <span style='color:orange;'> +50% aprox. </span> Made with PowerBI and used in top management committees to take decisions. Managed the different risk teams in the Units to generate data consistently and designed all database architecture.",
         "technologies": ["powerbi", "python", "mysql", "aws"],
         "sector": ["Banking"],
         "business_fields": ["Risk", "Credit", "Dashboard", "Mathematics", "Economics"],
         "year": "2025",
         "month": "03",
-        "dates": ["2025/02"]
+        "dates": ["2025/02"],
+        "company": "Santander Group Bank"
     },
     "2": {
         "icon": "🥤",
         "name": "Morning Coffee",
         "objective": "Credit Risk portfolio monitoring and forecasting",
-        "role": "BI Analyst & Dev",
+        "role": "BI Analyst & dev",
         "business": "Web application that automates analysis for credit risk, calculating KPIs such as default, acceptance, automation ratios dynamically, allowing users to set several grouping keys and parameters. This tool contributed to savings in losses estimated in <span style='color:orange;'> 1M € aprox. </span> in the 2025Q1,Q2 for a single Unit, feeding the decision engine. Allows the monitoring of credit loans portfolios, segmenting the population based on different filters. Also automates backtesting simulation and forecasting of the portfolio. Crafted in a personalized and detailed manner for 2 credit business units in Europe.",
         "technologies": ["python", "streamlit", "pandas", "plotly", "sqlite", "scikit", "aws", "airflow"],
         "sector": ["Banking"],
         "business_fields": ["Risk", "Credit", "Dashboard", "Mathematics", "Economics"],
         "year": "2024",
         "month": "09",
-        "dates": ["2024/09", "2024/12", "2025/03"]
+        "dates": ["2024/10", "2024/12", "2025/03"],
+        "company": "Santander Group Bank"
     },
     "3": {
         "icon": "📁",
@@ -36,7 +38,8 @@
         "business_fields": ["Internal Control", "Audit", "IT Compliance"],
         "year": "2024",
         "month": "03",
-        "dates": ["2022/05", "2023/05", "2024/02"]
+        "dates": ["2022/05", "2023/05", "2024/02"],
+        "company": "KPMG Advisory"
     },
     "4": {
         "icon": "🖥️",
@@ -49,7 +52,8 @@
         "business_fields": ["Risk", "Internal Control", "Audit"],
         "year": "2022",
         "month": "05",
-        "dates": ["2019/10", "2020/02", "2020/08", "2021/11", "2022/06", "2023/03", "2023/11", "2024/02", "2024/04", "2024/11"]
+        "dates": ["2019/11", "2020/02", "2020/08", "2021/11", "2022/07", "2023/03", "2023/11", "2024/01", "2024/04", "2024/11"],
+        "company": "KPMG Advisory"
     },
     "5": {
         "icon": "🦾",
@@ -62,7 +66,8 @@
         "business_fields": ["PMO"],
         "year": "2023",
         "month": "03",
-        "dates": ["2019/03", "2019/10", "2020/11", "2021/05", "2021/04"]
+        "dates": ["2019/03", "2019/10", "2020/11", "2021/05", "2021/04"],
+        "company": "KPMG Advisory"
     },
     "6": {
         "icon": "🎛️",
@@ -75,7 +80,8 @@
         "business_fields": ["Internal Control", "Audit"],
         "year": "2024",
         "month": "01",
-        "dates": ["2023/04", "2024/05"]
+        "dates": ["2023/04", "2024/05"],
+        "company": "KPMG Advisory"
     },
     "7": {
         "icon": "🎲",
@@ -88,7 +94,8 @@
         "business_fields": ["Mathematics", "Risk"],
         "year": "2024",
         "month": "01",
-        "dates": ["2022/01"]
+        "dates": ["2022/01"],
+        "company": "KPMG Advisory"
     },
     "8": {
         "icon": "🔑",
@@ -101,7 +108,8 @@
         "business_fields": ["Internal Control"],
         "year": "2023",
         "month": "06",
-        "dates": ["2020/07", "2021/06", "2022/06"]
+        "dates": ["2020/07", "2021/06", "2022/06"],
+        "company": "KPMG Advisory"
     },
     "9": {
         "icon": "🕸️",
@@ -114,7 +122,8 @@
         "business_fields": ["Risk"],
         "year": "2022",
         "month": "05",
-        "dates": ["2022/08", "2021/10"]
+        "dates": ["2022/08", "2021/10"],
+        "company": "KPMG Advisory"
     },
     "10": {
         "icon": "🖥️",
@@ -127,6 +136,7 @@
         "business_fields": ["PMO"],
         "year": "2021",
         "month": "04",
-        "dates": ["2022/01"]
+        "dates": ["2022/02"],
+        "company": "KPMG Advisory"
     }
 }

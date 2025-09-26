@@ -3,27 +3,29 @@
         "icon": ":material/adb:",
         "name": "Conquer Blocks Academy - Support IA Chatbot",
         "objective": "Build a chatbot accesible from Telegram that is trained with a specific knowledge base",
-        "role": "Dev",
+        "role": "dev",
         "business": "Build a prototype for the academy where a chatbot endpoint was accesible from Telegram and could answer questions about the educative content given. The bot was a GPT model trained with custom content that could be updated from an admin dashboard.",
         "technologies": ["telegram", "python", "streamlit", "openai", "sqlite", "aws"],
         "sector": ["Educative"],
         "business_fields": ["IA", "Dashboard"],
         "year": "2025",
         "month": "02",
-        "dates": ["2025/02"]
+        "dates": ["2025/01"],
+        "company": "Freelance"
     },
     "2": {
         "icon": "📊",
         "name": "Conquer Blocks Academy - CRM Dashboard",
         "objective": "To monitor and extract business intelligence from Client's database",
-        "role": "Dev",
+        "role": "dev",
         "business": "Embedded a plotly dashboard into a django web app where the sales and clients from the Academy were managed. The dashboard allowed to filter and drill down data to observe Sales team's performance and client specific insights.",
         "technologies": ["python", "django", "plotly", "postgresql", "docker"],
         "sector": ["Educative"],
         "business_fields": ["Dashboard"],
         "year": "2024",
         "month": "08",
-        "dates": ["2024/09"]
+        "dates": ["2024/09"],
+        "company": "Freelance"
     },
     "3": {
         "icon": ":material/code:",
@@ -36,19 +38,21 @@
         "business_fields": ["Development"],
         "year": "2024",
         "month": "08",
-        "dates": ["2024/08"]
+        "dates": ["2024/08"],
+        "company": "Freelance"
     },
     "4": {
         "icon": "🐦",
         "name": "Tweet scrapper",
         "objective": "Scrape specific tweets",
-        "role": "Dev",
+        "role": "dev",
         "business": "Develop a system using tweepy that scrapped tweets based on specific needs and keywords for a Client to monitor its reputational risk and opportunities.",
         "technologies": ["python", "tweepy"],
         "sector": ["Infrastructure"],
         "business_fields": ["Risk"],
         "year": "2010",
         "month": "10",
-        "dates": ["2020/01"]
+        "dates": ["2020/01"],
+        "company": "Freelance"
     }
 }

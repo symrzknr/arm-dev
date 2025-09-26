@@ -20,7 +20,6 @@ st.set_page_config(
 def page_main():
 
     df = get_project_df()
-
     c1,c2,c3 = st.columns([1,7,1])
     with c2:
         with st.container(
@@ -50,7 +49,7 @@ def page_main():
                     horizontal_alignment = 'right',
                     vertical_alignment = 'center',
                 ):
-                    st.image("./src/media/FotoCB.png", width = 100)
+                    st.image("./src/media/FotoCB.png", width = 120)
                 
             with sc3: 
                 with st.container(
@@ -85,7 +84,7 @@ def page_main():
                 st.write(" ")
                 st.write(" ")
                 st.write(" ")
-                color_opts = ['year', 'month', 'project_type', 'technologies', 'business_fields', 'role', 'sector']
+                color_opts = ['year', 'month', 'project_type', 'role', 'company', 'sector', 'technologies', 'business_fields']
                 x_axis = st.selectbox('x-axis', color_opts, index = 0)
                 y_axis = st.selectbox('y-axis', color_opts, index = 1)
                 color = st.selectbox('color', color_opts, index = 2)
