@@ -47,6 +47,7 @@ def get_heatmap_data(df, x, y, c):
 
     # --- Bar (RIGHT, aligned colors, with percentage labels) ---
     c_distribution = counts.groupby(c, as_index=False)["count"].sum()
+    c_distribution = c_distribution.sort_values("count", ascending=False)  # 👈 SORT by amount
     total = c_distribution["count"].sum()
     c_distribution["pct"] = (c_distribution["count"] / total * 100).round(0).astype(int)
 
@@ -61,7 +62,7 @@ def get_heatmap_data(df, x, y, c):
                 text=f"{row['pct']}%",
                 textposition="inside",        # 👈 puts text inside bar
                 insidetextanchor="middle",    # 👈 vertically center inside bar
-                textfont=dict(size=12, color="black"),  # small text inside bars
+                textfont=dict(size=10, color="black"),  # small text inside bars
                 hovertemplate=(
                     f"{c}: {row[c]}<br>"
                     f"Count: {row['count']}<br>"
@@ -92,8 +93,8 @@ def get_heatmap_data(df, x, y, c):
         legend=dict(
             title=c,
             orientation="h",
-            x=0.3,             # 👈 center horizontally
-            y=-0.05,           # closer to bottom
+            x=0.5,             # 👈 truly center horizontally
+            y=-0.1,            # 👈 closer to bottom (adjust to taste)
             xanchor="center",
             yanchor="top",
             bgcolor="rgba(0,0,0,0)",
@@ -132,8 +133,8 @@ def get_heatmap_data(df, x, y, c):
         tickformat=".0f",
         ticksuffix="%",
         tickfont=dict(color="white"),
-        gridcolor=grid_color,
-        showgrid=True,
+        showgrid=False,
+        side="right",
         row=1, col=2
     )
     fig.update_xaxes(

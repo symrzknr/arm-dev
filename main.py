@@ -75,15 +75,15 @@ def page_main():
                 )
             
             
-            cc1, cc2 = st.columns([8,1])
+            cc1, cc2 = st.columns([10,2])
             with cc1:
                 fig_w = st.empty()
                 
             with cc2:
                 st.write(" ")
                 st.write(" ")
-                st.write(" ")
-                st.write(" ")
+                
+                st.caption("Play with my projects!")
                 color_opts = ['year', 'month', 'project_type', 'role', 'company', 'sector', 'technologies', 'business_fields']
                 x_axis = st.selectbox('x-axis', color_opts, index = 0)
                 y_axis = st.selectbox('y-axis', color_opts, index = 1)

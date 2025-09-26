@@ -62,7 +62,7 @@
         "role": "dev",
         "business": "Developed infrastructure and application layers of custom software to automate tasks supporting business projects: automate generation of office documents and reports, automate polls, survey and review projects, automate reading, process and transformation of data with AI.</br>These tools reduced manual work on a <span style='color:orange;'> -70% average </span>.",
         "technologies": ["streamlit", "mongodb","pandas", "python", "aws", "heroku", "postman"],
-        "sector": ["Office"],
+        "sector": ["Office", "Banking"],
         "business_fields": ["PMO"],
         "year": "2023",
         "month": "03",
