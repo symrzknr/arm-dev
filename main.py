@@ -87,7 +87,7 @@ def page_main():
                 color_opts = ['year', 'month', 'project_type', 'role', 'company', 'sector', 'technologies', 'business_fields']
                 x_axis = st.selectbox('x-axis', color_opts, index = 0)
                 y_axis = st.selectbox('y-axis', color_opts, index = 1)
-                color = st.selectbox('color', color_opts, index = 2)
+                color = st.selectbox('color', color_opts, index = 4)
 
                 if x_axis == y_axis or x_axis == color or y_axis == color:
                     fig_w.info("Selections must be different")
