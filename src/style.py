@@ -19,6 +19,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+
 icons = {
     'python': """<i class="devicon-python-plain" style="font-size: 20px; color: white;"></i>""",
 }
+

@@ -8,6 +8,7 @@ from src.footer import footer
 import src.style as style
 import src.text as text
 import src.icon as icon
+from src.email_send import send_email, send_dialog, smtp_send
 
 st.set_page_config(
     page_title="arm-dev",
@@ -15,7 +16,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
 
 def page_main():
 
@@ -68,7 +68,7 @@ def page_main():
                         I have +8 years of professional experience in <span style="color:orange;">business intelligence</span> and <span style="color:orange;">automation</span> projects in international environments, translating business requirements into analytical solutions and strategies.
                     </p>
                     <p style="font-size:18px;">
-                        I've led projects and teams with a strong focus on <span style="color:orange;">business alignment</span> and clear communication. My commitment, responsibility, and <span style="color:orange;">versatility</span> ensure that every initiative delivers real value, making a meaningful difference in outcomes.
+                        I've led projects and teams with a strong focus on <span style="color:orange;">business alignment</span> and clear communication with senior management. My commitment, responsibility, and <span style="color:orange;">versatility</span> ensure that every initiative delivers real value, making a meaningful difference in outcomes.
                     </p>
                     """,
                     unsafe_allow_html=True
@@ -98,7 +98,7 @@ def page_main():
             st.markdown(
                     """
                     <p style="font-size:18px;">
-                        After 5 years in KPMG, I'm currently working in Santander Group bank, where I perform as a senior risk data analyst focusing on data strategy at international level.
+                        After 5 years in KPMG, I'm currently working in Santander Group bank, where I perform as a senior full-stack data senior analyst focusing on data strategy at international level.
                     </p>
                     <p style="font-size:18px;">
                         Here are some of the technologies I like to work with:
@@ -128,7 +128,49 @@ def page_main():
                         border_radius = 14,
                         background_color = "161C26",
                     )
+            st.divider()
+            st.write(" ")
+            st.write(" ")
+            
 
+            c1,c2,c3 = st.columns([1,4,1])
+
+            with c2:
+                st.header("Contact")
+
+                sc1, sc2 = st.columns([2,3])
+                with sc1:
+                    sender = st.text_input("From")
+                with sc2:
+                    subject = st.text_input("Subject")
+                body = st.text_area("Mmessage")
+
+                sc1, sc2 = st.columns([1,5])
+                with sc1:
+                    
+                    send = st.button("Send", icon="✉️")
+
+                with sc2:
+                    if send:
+                        msg = {"sender": sender, "subject": subject, "body": body}
+                        if all([msg[k] for k in msg]):
+
+                            send_email(msg)
+                            # Show dialog if state says so
+                        else:
+                            st.info("Please, fill all the fields")
+
+                    if st.session_state.show_dialog:
+                        send_dialog()
+
+                    if st.session_state.confirmed_send is True:
+                        result = smtp_send()
+                        if result is True:
+                            st.success("✅ Email sent successfully!")
+                        else:
+                            st.error(f"❌ Failed: {result}")
+                    
+    
             # with st.container(
             #     horizontal = True,
             #     gap = "medium",                
