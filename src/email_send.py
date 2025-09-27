@@ -2,6 +2,11 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import streamlit as st
+import tomllib
+
+if not st.secrets:
+    with open(".streamlit/secrets.toml", "rb") as f:
+        st.secrets._secrets = tomllib.load(f)  # force-inject into st.secrets
 
 # --- SESSION STATE ---
 if "show_dialog" not in st.session_state:
