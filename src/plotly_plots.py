@@ -36,7 +36,8 @@ def get_heatmap_data(df, x, y, c):
         x=x,
         y=y,
         color=c,
-        custom_data=["names"]
+        custom_data=["names"],
+        color_discrete_sequence = px.colors.qualitative.Bold,
     )
 
     # Extract color mapping from scatter

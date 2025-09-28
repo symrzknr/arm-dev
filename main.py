@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import json
+import time
 from src.project_render import project
 from src.plotly_plots import get_heatmap_data
 from src.projects_data import get_project_df
@@ -16,6 +17,12 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+if st.session_state.get("reset_form", False):
+    st.session_state.sender_input = ""
+    st.session_state.subject_input = ""
+    st.session_state.body_input = ""
+    st.session_state.reset_form = False  # clear the flag
 
 def page_main():
 
@@ -83,7 +90,7 @@ def page_main():
                 st.write(" ")
                 st.write(" ")
                 
-                st.caption("Play with my projects!")
+                st.caption("Play with some of my projects!")
                 color_opts = ['year', 'month', 'project_type', 'role', 'company', 'sector', 'technologies', 'business_fields']
                 x_axis = st.selectbox('x-axis', color_opts, index = 0)
                 y_axis = st.selectbox('y-axis', color_opts, index = 1)
@@ -98,9 +105,21 @@ def page_main():
             st.markdown(
                     """
                     <p style="font-size:18px;">
-                        After 5 years in KPMG, I'm currently working in Santander Group bank, where I perform as a senior full-stack data senior analyst focusing on data strategy at international level.
+                        <span style="color:orange;">🚀 Career Timeline</span>
+                        <ul>
+                            <li>
+                            <b>[CITD Technology, 1.5 years]</b> Started my career performing stress calculus for european aerospace industry, developing a strong foundation in precision engineering and analytical thinking.
+                            </li>
+                            <li>
+                            <b>[KPMG Advisory, 5.5 years]</b> Then, I transitioned into consulting, where I improved my expertise in data analysis, process improvement, and business strategy, working with diverse clients and complex projects as a manager.
+                            </li>
+                            <li>
+                            <b>[Santander Banking Group, 1.5 years]</b> Currently serving as a Senior Full-Stack Data Analyst, driving international data strategy initiatives and building end-to-end solutions that bridge technical implementation and business impact.
+                            </li>
+                        </ul>
                     </p>
                     <p style="font-size:18px;">
+                        <span style="color:orange;">🖥️ Tech stack</span></br>
                         Here are some of the technologies I like to work with:
                     </p>
                     </br>
@@ -140,10 +159,10 @@ def page_main():
 
                 sc1, sc2 = st.columns([2,3])
                 with sc1:
-                    sender = st.text_input("From")
+                    sender = st.text_input("Email:red[*]", key="sender_input")
                 with sc2:
-                    subject = st.text_input("Subject")
-                body = st.text_area("Mmessage")
+                    subject = st.text_input("Subject:red[*]", key="subject_input")
+                body = st.text_area("Message:red[*]", key="body_input")
 
                 sc1, sc2 = st.columns([1,5])
                 with sc1:
@@ -166,16 +185,15 @@ def page_main():
                     if st.session_state.confirmed_send is True:
                         result = smtp_send()
                         if result is True:
-                            st.success("✅ Email sent successfully!")
+                            st.toast("✅ Email sent successfully!")
+                            time.sleep(3)
+                            # --- 2️⃣ Set flag and rerun ---
+                            st.session_state.reset_form = True
+                            st.rerun()
+                            
                         else:
-                            st.error(f"❌ Failed: {result}")
+                            st.toast(f"❌ Failed: {result}")
                     
-    
-            # with st.container(
-            #     horizontal = True,
-            #     gap = "medium",                
-            #     horizontal_alignment = "right",                
-            #     ):
 
 def page_prof_projects():
 
@@ -236,6 +254,5 @@ pages = {
     ],
 }
 pg = st.navigation(pages, position = "sidebar")
-
 pg.run()
 

@@ -39,4 +39,7 @@ badges = {
     "Data":{
         "icon":":material/data_array:",
     },
+    "Stress calculus":{
+        "icon":":material/function:",
+    },
 }

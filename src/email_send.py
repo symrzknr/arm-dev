@@ -15,7 +15,7 @@ if "confirmed_send" not in st.session_state:
     st.session_state.confirmed_send = None
 
 # --- DIALOG ---
-@st.dialog("contact @arm", dismissible = False)
+@st.dialog("Contact @arm", dismissible = False)
 def send_dialog():
     st.write("Are you sure you want to send this email?")
     col1, col2 = st.columns(2)

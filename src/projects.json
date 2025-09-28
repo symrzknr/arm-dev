@@ -4,7 +4,7 @@
         "name": "Risk Reward Report",
         "objective": "Portfolio monitoring",
         "role": "BI Analyst & dev",
-        "business": "Aggregates all business units in Europe and America (15 units) to achieve credit loan portfolio monitoring evolution over time. This includes business volume, risk and finance KPI's and default ratios. Improved reporting and decision timing in <span style='color:orange;'> +50% aprox. </span> Made with PowerBI and used in top management committees to take decisions. Managed the different risk teams in the Units to generate data consistently and designed all database architecture.",
+        "business": "Aggregates all business units in Europe and America (15 units) to achieve credit loan portfolio monitoring evolution over time. This includes business volume, risk and finance KPI's and default ratios. Improved reporting and decision timing in <span style='color:orange;'> +50% aprox. </span></br></br>Made with PowerBI and used in top management committees to take decisions. Managed the different risk teams in the Units to generate data consistently and designed all database architecture.",
         "technologies": ["powerbi", "python", "mysql", "aws"],
         "sector": ["Banking"],
         "business_fields": ["Risk", "Credit", "Dashboard", "Mathematics", "Economics"],
@@ -18,7 +18,7 @@
         "name": "Morning Coffee",
         "objective": "Credit Risk portfolio monitoring and forecasting",
         "role": "BI Analyst & dev",
-        "business": "Web application that automates analysis for credit risk, calculating KPIs such as default, acceptance, automation ratios dynamically, allowing users to set several grouping keys and parameters. This tool contributed to savings in losses estimated in <span style='color:orange;'> 1M € aprox. </span> in the 2025Q1,Q2 for a single Unit, feeding the decision engine. Allows the monitoring of credit loans portfolios, segmenting the population based on different filters. Also automates backtesting simulation and forecasting of the portfolio. Crafted in a personalized and detailed manner for 2 credit business units in Europe.",
+        "business": "Web application that automates analysis for credit risk, calculating KPIs such as default, acceptance, automation ratios dynamically, allowing users to set several grouping keys and parameters. This tool contributed to savings in losses estimated in <span style='color:orange;'> 1M € aprox. </span> in the 2025Q1,Q2 for a single Unit, feeding the decision engine. Allows the monitoring of credit loans portfolios, segmenting the population based on different filters.</br></br>Also automates backtesting simulation and forecasting of the portfolio. Crafted in a personalized and detailed manner for 2 credit businesses units in Europe.",
         "technologies": ["python", "streamlit", "pandas", "plotly", "sqlite", "scikit", "aws", "airflow"],
         "sector": ["Banking"],
         "business_fields": ["Risk", "Credit", "Dashboard", "Mathematics", "Economics"],
@@ -138,5 +138,19 @@
         "month": "04",
         "dates": ["2022/02"],
         "company": "KPMG Advisory"
+    },
+    "11": {
+        "icon": "✈️",
+        "name": "Structural analysis automation",
+        "objective": "Automatate aerospace structure stress simulations",
+        "role": "Stress Engineer",
+        "business": "Improved the timing of stress simulation calculations in european aerospace industry by <span style='color:orange;'> +75%</span>, using python scripts that automated the reading, transformation and output format of the tests in aerospace industry. The different load cases where run across a whole section of the structure (finite elements method) and were represented in a final fish-tail heatmap, signaling outliers given a map of thresholds.",
+        "technologies": ["python", "office"],
+        "sector": ["Aerospace"],
+        "business_fields": ["Stress calculus"],
+        "year": "2018",
+        "month": "02",
+        "dates": ["2018/02"],
+        "company": "CITD Technology"
     }
 }
