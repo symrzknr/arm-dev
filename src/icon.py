@@ -3,6 +3,7 @@ import streamlit as st
 import requests
 import base64
 import urllib.parse
+
 #FFA500
 # https://github.com/inttter/md-badges?utm_source=chatgpt.com
 
@@ -72,7 +73,7 @@ def shields_badge(text, color="161C26", style="flat-square",
 
 def get_lottie_icon(name, w, h):
     lottie_json = requests.get(icons_url[name]).json()
-    return st_lottie(lottie_json, speed=1, loop=False, width=w, height=h)
+    return st_lottie(lottie_json, speed=1, loop=False, width="%d%%" % w, height=None)
 
 def get_dir_icon(name):
     return icons_url[name]
