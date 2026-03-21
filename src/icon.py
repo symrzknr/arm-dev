@@ -3,6 +3,22 @@ import streamlit as st
 import requests
 import base64
 import urllib.parse
+from pathlib import Path
+
+local_icons = {
+    "openai": "./src/media/fallback/chatgpt.png",
+    "aws": "./src/media/fallback/aws.png",
+    "powerbi": "./src/media/fallback/powerbi.png",
+    "scikit": "./src/media/fallback/scikit.png",
+    "heroku": "./src/media/fallback/heroku.png",
+    "office": "./src/media/fallback/office.png",
+    "sharepoint": "./src/media/fallback/sharepoint.png",
+    "airflow": "./src/media/fallback/airflow.png",
+    "tweepy": "./src/media/fallback/tweepy.png",
+    "vscode": "./src/media/fallback/vscode.png",
+    "pyspark": "./src/media/fallback/pyspark.png",
+    "sql": "./src/media/fallback/sql.png",
+}
 #FFA500
 # https://github.com/inttter/md-badges?utm_source=chatgpt.com
 
@@ -16,22 +32,7 @@ def shields_badge(text, color="161C26", style="flat-square",
                   width=None, height=None, border_color=None, border_radius=None, background_color = None):
     """
     Generate a Shields.io badge URL with official brand colors by default.
-
-    Parameters:
-    - label (str): Left-side text (or only text if message=None)
-    - message (str): Optional right-side text
-    - color (str): Badge background color (hex or name). If None, uses brand color
-    - style (str): Badge style ('plastic', 'flat', 'flat-square', 'for-the-badge', 'social')
-    - logo (str): SimpleIcons logo name (e.g., 'python', 'mongodb')
-    - logoColor (str): Logo color
-    - labelColor (str): Background color of label part
-    - width (int/float): Width of the badge in pixels (optional, scaling only)
-    - height (int/float): Height of the badge in pixels (optional, scaling only)
-    - border_color (str): Hex or named color for border around badge
-    - border_radius (int/float): Rounded corners in pixels (optional)
-
-    Returns:
-    - str: Full Shields.io badge URL
+    Falls back to local PNG if Shields.io logo is not found.
     """
 
     base = "https://img.shields.io/badge/"
@@ -48,22 +49,44 @@ def shields_badge(text, color="161C26", style="flat-square",
         url += f"&logoColor={logoColor}"
     if background_color:
         url += f"&color={background_color}"
-    # url += "&logoWidth=30"
 
-    # Render in Streamlit with optional width, height, border, and border-radius
+    # Prepare HTML style
     html_style = ""
+    style_list = []
+    if width:
+        style_list.append(f"width:{width}px;")
+    if height:
+        style_list.append(f"height:{height}px;")
+    if border_color:
+        style_list.append(f"border:2px solid {border_color};")
+    if border_radius:
+        style_list.append(f"border-radius:{border_radius}px;")
+    html_style = " ".join(style_list)
+
+    # Try local fallback if logo is in our dictionary
+    if logo and logo.lower() in local_icons:
+        png_path = local_icons[logo.lower()]
+        if Path(png_path).exists():
+            icon_base64 = get_base64_of_bin_file(png_path)
+            
+
+            st.markdown(
+                f'<div style="display:inline-block; background:#{background_color or color}; border-radius:8px; padding:12px;">'
+                f'<img src="data:image/png;base64,{icon_base64}" style="height:18px; width:auto; vertical-align:middle;">'
+                f'<p style="display:inline-block; color:#fff; margin-left:8px; font-size:11px; font-weight: 400; height: 4px;">{logo}</p>'
+                f'</div>',
+                unsafe_allow_html=True
+            )
+            return f"local:{logo}"
+
+    # Render normal Shields.io badge
     if border_color or width or height or border_radius:
-        style_list = []
-        if width:
-            style_list.append(f"width:{width}px;")
-        if height:
-            style_list.append(f"height:{height}px;")
-        if border_color:
-            style_list.append(f"border:2px solid {border_color};")
-        if border_radius:
-            style_list.append(f"border-radius:{border_radius}px;")
-        html_style = " ".join(style_list)
-        st.markdown(f'<div style="display:inline-block; background:#{background_color}; border-radius:8px; padding:12px;"><img src="{url}" style="{html_style}"></div>', unsafe_allow_html=True)
+        st.markdown(
+            f'<div style="display:inline-block; background:#{background_color or color}; border-radius:8px; padding:12px;">'
+            f'<img src="{url}"'
+            f'</div>',
+            unsafe_allow_html=True
+        )
     else:
         st.image(url)
 

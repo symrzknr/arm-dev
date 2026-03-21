@@ -1,19 +1,33 @@
 {
     "1": {
+        "icon": "✨",
+        "name": "AI Adoption",
+        "objective": "To centralize, evaluate, and operationalize AI capabilities across both technical and business departments to drive efficiency and innovation",
+        "role": "BI Analyst & dev",
+        "business": "This initiative focused on the strategic integration and operationalization of AI technologies across the company, bridging the gap between raw AI potential and practical business value. I led the technical evaluation of diverse AI sources—including ChatGPT, a custom-built Local LLM with RAG (Retrieval-Augmented Generation)— and other AI tools to provide a versatile toolkit for different data privacy and performance needs.</br></br>The project’s success is highlighted by the successful onboarding of six cross-functional teams, effectively democratizing AI access across the organization. This effort involved direct consultancy to identify high-impact workflows, resulting in the production of automated solutions that significantly enhanced operational efficiency. By providing a centralized framework for AI adoption, the project not only improved departmental throughput but also established a robust standard for secure, scalable AI implementation within the company's ecosystem.",
+        "technologies": ["openai", "python", "ollama", "streamlit"],
+        "sector": ["Banking"],
+        "business_fields": ["Risk", "Credit", "Economics"],
+        "year": "2026",
+        "month": "01",
+        "dates": ["2026/01"],
+        "company": "Santander Bank Group"
+    },
+    "2": {
         "icon": "👁️",
         "name": "Risk Reward Report",
         "objective": "Portfolio monitoring",
         "role": "BI Analyst & dev",
-        "business": "Aggregates all business units in Europe and America (15 units) to achieve credit loan portfolio monitoring evolution over time. This includes business volume, risk and finance KPI's and default ratios. Improved reporting and decision timing in <span style='color:orange;'> +50% aprox. </span></br></br>Made with PowerBI and used in top management committees to take decisions. Managed the different risk teams in the Units to generate data consistently and designed all database architecture.",
+        "business": "Aggregates all business units in Europe and America (15 units) to achieve credit loan portfolio monitoring evolution over time. This includes business volume, risk and finance KPI's and default ratios at sales channel and client segment level. Improved reporting and decision timing in <span style='color:orange;'> +50% aprox. </span></br></br>Made with PowerBI and used in top management committees to take decisions. Managed the different risk teams in the Units to generate data consistently and designed all database architecture.",
         "technologies": ["powerbi", "python", "mysql", "aws"],
         "sector": ["Banking"],
         "business_fields": ["Risk", "Credit", "Dashboard", "Mathematics", "Economics"],
         "year": "2025",
         "month": "03",
         "dates": ["2025/02"],
-        "company": "Santander Group Bank"
+        "company": "Santander Bank Group"
     },
-    "2": {
+    "3": {
         "icon": "🥤",
         "name": "Morning Coffee",
         "objective": "Credit Risk portfolio monitoring and forecasting",
@@ -24,10 +38,10 @@
         "business_fields": ["Risk", "Credit", "Dashboard", "Mathematics", "Economics"],
         "year": "2024",
         "month": "09",
-        "dates": ["2024/10", "2024/12", "2025/03"],
-        "company": "Santander Group Bank"
+        "dates": ["2024/10", "2024/12", "2025/03", "2025/10"],
+        "company": "Santander Bank Group"
     },
-    "3": {
+    "4": {
         "icon": "📁",
         "name": "SOX GITC implementation",
         "objective": "Internal control readiness for IPO",
@@ -41,13 +55,13 @@
         "dates": ["2022/05", "2023/05", "2024/02"],
         "company": "KPMG Advisory"
     },
-    "4": {
+    "5": {
         "icon": "🖥️",
         "name": "GRC Tools",
         "objective": "Digitalize Risk-Control models",
         "role": "Risk Manager & dev",
         "business": "Lead and co-developed from scratch several customized software tools to manage, evaluate and report risk & control models. Includes functional, software / database architecture and workflow designs, UATs, full stack implementation and maintenance of infrastructure as well as reporting dashboards.",
-        "technologies": ["docker", "django", "sqlite", "js", "php", "plotly", "dash", "javascript"],
+        "technologies": ["docker", "django", "sqlite", "php", "plotly", "dash", "javascript"],
         "sector": ["Infrastructure", "Pharma"],
         "business_fields": ["Risk", "Internal Control", "Audit"],
         "year": "2022",
@@ -55,7 +69,7 @@
         "dates": ["2019/11", "2020/02", "2020/08", "2021/11", "2022/07", "2023/03", "2023/11", "2024/01", "2024/04", "2024/11"],
         "company": "KPMG Advisory"
     },
-    "5": {
+    "6": {
         "icon": "🦾",
         "name": "Automation tools",
         "objective": "Automate PMO tasks",
@@ -69,7 +83,7 @@
         "dates": ["2019/03", "2019/10", "2020/11", "2021/05", "2021/04"],
         "company": "KPMG Advisory"
     },
-    "6": {
+    "7": {
         "icon": "🎛️",
         "name": "Automatic controls",
         "objective": "Automate internal controls for Procurement and Vendor",
@@ -83,7 +97,7 @@
         "dates": ["2023/04", "2024/05"],
         "company": "KPMG Advisory"
     },
-    "7": {
+    "8": {
         "icon": "🎲",
         "name": "IA, Optimization & Strategic tools",
         "objective": "Mathematical optimization and IA",
@@ -97,7 +111,7 @@
         "dates": ["2022/01"],
         "company": "KPMG Advisory"
     },
-    "8": {
+    "9": {
         "icon": "🔑",
         "name": "Segregation of duties",
         "objective": "Automate segregation of duties in company roles",
@@ -111,7 +125,7 @@
         "dates": ["2020/07", "2021/06", "2022/06"],
         "company": "KPMG Advisory"
     },
-    "9": {
+    "10": {
         "icon": "🕸️",
         "name": "Risk Graph Network",
         "objective": "Establish a corporate risk network",
@@ -125,7 +139,7 @@
         "dates": ["2022/08", "2021/10"],
         "company": "KPMG Advisory"
     },
-    "10": {
+    "11": {
         "icon": "🖥️",
         "name": "Sales pipeline dashboard",
         "objective": "Monitor executed department's pipeline and forecast incoming executions and sales",
@@ -139,7 +153,7 @@
         "dates": ["2022/02"],
         "company": "KPMG Advisory"
     },
-    "11": {
+    "12": {
         "icon": "✈️",
         "name": "Structural analysis automation",
         "objective": "Automatate aerospace structure stress simulations",

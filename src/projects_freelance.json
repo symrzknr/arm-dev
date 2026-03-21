@@ -1,5 +1,19 @@
 {
     "1": {
+        "icon": ":material/document_search:",
+        "name": "Cohen",
+        "objective": "Build a RAG application with a Ghost philosophy, ensuring zero-trace document intelligence.",
+        "role": "dev",
+        "business": "Cohen is a high-confidentiality, zero-trace RAG (Retrieval-Augmented Generation) application designed for secure document intelligence and multi-file analysis. Built with a Ghost philosophy, it empowers users to upload sensitive files, engage in context-aware chat, and execute deep architectural protocols—such as structural compression or comparative deltas—without ever storing document contents, chat histories, or generated insights beyond the active session. By utilizing a localized or specialized LLM infrastructure, Cohen transforms unorganized private data into structured, actionable intelligence while ensuring that once a session ends, no digital footprint remains.",
+        "technologies": ["python", "streamlit", "sqlite", "aws", "ollama"],
+        "sector": ["General Purpose"],
+        "business_fields": ["IA"],
+        "year": "2025",
+        "month": "11",
+        "dates": ["2025/11"],
+        "company": "Freelance"
+    },
+    "2": {
         "icon": ":material/adb:",
         "name": "Conquer Blocks Academy - Support IA Chatbot",
         "objective": "Build a chatbot accesible from Telegram that is trained with a specific knowledge base",
@@ -13,7 +27,7 @@
         "dates": ["2025/01"],
         "company": "Freelance"
     },
-    "2": {
+    "3": {
         "icon": "📊",
         "name": "Conquer Blocks Academy - CRM Dashboard",
         "objective": "To monitor and extract business intelligence from Client's database",
@@ -27,7 +41,7 @@
         "dates": ["2024/09"],
         "company": "Freelance"
     },
-    "3": {
+    "4": {
         "icon": ":material/code:",
         "name": "Conquer Blocks Academy - Streamlit course",
         "objective": "Dedicated Streamlit module course",

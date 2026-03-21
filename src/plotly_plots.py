@@ -88,7 +88,7 @@ def get_heatmap_data(df, x, y, c):
         plot_bgcolor="#192130",
         paper_bgcolor="#192130",
         font=dict(color="white"),
-        margin=dict(l=130, r=130, t=60, b=70),
+        margin=dict(l=30, r=30, t=60, b=70),
         autosize=True,
         height=None,
         legend=dict(
