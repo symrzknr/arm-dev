@@ -69,7 +69,7 @@ def page_main():
             st.markdown(
                     """
                     <p style="font-size:18px;">
-                        👋 Hey there! I'm Mario, a dedicated engineer, with a primary focus on <span style="color:orange;">technology</span> and <span style="color:orange;">data science</span>. During my studies in engineering and mathematics, I discovered that my real passion was <span style="color:orange;">coding</span>.
+                        👋 Hey there! I'm Mario, a dedicated engineer, with a primary focus on <span style="color:orange;">technology</span> and <span style="color:orange;">data science</span>. During my studies in engineering and mathematics, I discovered that my real passion was <span style="color:orange;">building</span>.
                     </p>
                     <p style="font-size:18px;">
                         I have +8 years of professional experience in <span style="color:orange;">business intelligence</span> and <span style="color:orange;">automation</span> projects in international environments, translating business requirements into analytical solutions and strategies. I've worked in financial risk management, process optimization, and data-driven decision-making, delivering impactful results across various industries.
@@ -101,8 +101,8 @@ def page_main():
             tech_categories = {
                 "Languages & Core": ["python", "javascript", "sql"],
                 "Data Science & AI": [
-                    "pandas", "scikit", "pyspark", "openai", "huggingface", 
-                    "ollama", "claude", "githubcopilot"
+                    "claude", "pandas", "scikit", "pyspark", "openai", "huggingface", 
+                    "ollama", "githubcopilot"
                 ],
                 "Web dev": ["plotly", "dash", "powerbi", "streamlit", "django"],
                 "Databases": ["sqlite", "postgresql", "mongodb", "snowflake"],
