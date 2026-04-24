@@ -259,10 +259,10 @@ def page_main():
                         else:
                             st.info("Please, fill all the fields")
 
-                    if st.session_state.show_dialog:
+                    if st.session_state.get("show_dialog"):
                         send_dialog()
 
-                    if st.session_state.confirmed_send is True:
+                    if st.session_state.get("confirmed_send") is True:
                         result = smtp_send()
                         if result is True:
                             st.toast("✅ Email sent successfully!")
