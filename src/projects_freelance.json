@@ -1,5 +1,33 @@
 {
     "1": {
+        "icon": "🧭",
+        "name": "SophIA — Digital Transformation Platform",
+        "objective": "Design and build a full-stack diagnostic platform for structured digital-transformation assessments",
+        "role": "Sr Advisor & Full-Stack dev",
+        "business": "Designed and built SophIA, a full-stack diagnostic platform that guides organizations through a structured <span style='color:orange;'>7-phase continuous-improvement methodology</span> for digital transformation.</br></br>Built the complete architecture: Django / PostgreSQL REST API on the backend, React / TypeScript / Vite / Tailwind on the frontend, containerized with Docker Compose and delivered as <span style='color:orange;'>self-hostable software</span>. Integrated AI capabilities via Anthropic API for interview analysis with human-in-the-loop validation.</br></br>Acted as <span style='color:orange;'>sole integration owner</span> across a multi-developer team, establishing the spec-driven, AI-assisted development workflow and onboarding non-developer consultants into the process.",
+        "technologies": ["python", "django", "react", "typescript", "postgresql", "docker", "claude"],
+        "sector": ["Consulting"],
+        "business_fields": ["Digital Transformation", "IA", "Development"],
+        "year": "2026",
+        "month": "06",
+        "dates": ["2026/06"],
+        "company": "Kearney"
+    },
+    "2": {
+        "icon": "💡",
+        "name": "Digital Transformation & AI Advisory",
+        "objective": "Advisory on digital-transformation and AI-adoption initiatives for consulting teams",
+        "role": "Sr Advisor",
+        "business": "Advisory on <span style='color:orange;'>digital-transformation and AI-adoption</span> initiatives for consulting teams, providing strategic guidance on how to integrate AI tools into existing workflows and identifying high-impact opportunities for automation.</br></br>Delivered hands-on consultancy to support the adoption of AI-assisted development practices, helping <span style='color:orange;'>onboard non-developer consultants</span> into technology-driven project delivery and bridging the gap between business strategy and technical implementation.",
+        "technologies": ["python", "claude"],
+        "sector": ["Consulting"],
+        "business_fields": ["Digital Transformation", "IA"],
+        "year": "2026",
+        "month": "06",
+        "dates": ["2026/06"],
+        "company": "Kearney"
+    },
+    "3": {
         "icon": ":material/document_search:",
         "name": "Cohen",
         "objective": "Build a RAG application with a Ghost philosophy, ensuring zero-trace document intelligence.",
@@ -13,7 +41,7 @@
         "dates": ["2025/11"],
         "company": "Freelance"
     },
-    "2": {
+    "4": {
         "icon": ":material/adb:",
         "name": "Conquer Blocks Academy - Support IA Chatbot",
         "objective": "Build a chatbot accesible from Telegram that is trained with a specific knowledge base",
@@ -27,7 +55,7 @@
         "dates": ["2025/01"],
         "company": "Freelance"
     },
-    "3": {
+    "5": {
         "icon": "📊",
         "name": "Conquer Blocks Academy - CRM Dashboard",
         "objective": "To monitor and extract business intelligence from Client's database",
@@ -41,7 +69,7 @@
         "dates": ["2024/09"],
         "company": "Freelance"
     },
-    "4": {
+    "6": {
         "icon": ":material/code:",
         "name": "Conquer Blocks Academy - Streamlit course",
         "objective": "Dedicated Streamlit module course",
@@ -55,7 +83,7 @@
         "dates": ["2024/08"],
         "company": "Freelance"
     },
-    "4": {
+    "7": {
         "icon": "🐦",
         "name": "Tweet scrapper",
         "objective": "Scrape specific tweets",

@@ -1,5 +1,19 @@
 {
     "1": {
+        "icon": "🎮",
+        "name": "iGrind — Game monster tracker",
+        "objective": "Track monster spawns in real-time across game servers",
+        "role": "dev",
+        "business": "Built a three-service platform (Flask API + Streamlit UI + automated scraper) that scrapes monster spawn coordinates from iScout in real-time. Uses a Socket.IO browserless path with a Playwright/Chromium fallback, posting batches to an internal API that upserts/deletes spawns transactionally. Users can search monsters across servers, bookmark spawns, and track despawns. Includes a full admin panel with user management, scraper health monitoring, and runtime config editing. Dockerized end-to-end with scheduled scraping, session reuse, and automatic failover.",
+        "technologies": ["python", "streamlit", "docker", "postgresql"],
+        "sector": ["Gaming"],
+        "business_fields": ["Data", "Full-stack"],
+        "year": "2026",
+        "month": "04",
+        "dates": ["2026/04"],
+        "company": "Personal"
+    },
+    "2": {
         "icon": "📈",
         "name": "Savings portfolio monitoring",
         "objective": "",
@@ -13,7 +27,7 @@
         "dates": ["2022/03"],
         "company": "Personal"
     },
-    "2": {
+    "3": {
         "icon": "🔍",
         "name": "Job search automation",
         "objective": "",
@@ -27,7 +41,7 @@
         "dates": ["2018/01"],
         "company": "Personal"
     },
-    "3": {
+    "4": {
         "icon": "₿",
         "name": "Crypto monitoring",
         "objective": "Monitor crypto currencies and extract indicators for business opportunities",

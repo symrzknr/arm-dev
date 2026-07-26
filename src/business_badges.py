@@ -42,4 +42,10 @@ badges = {
     "Stress calculus":{
         "icon":":material/function:",
     },
+    "Digital Transformation":{
+        "icon":":material/auto_awesome:",
+    },
+    "Full-stack":{
+        "icon":":material/layers:",
+    },
 }
