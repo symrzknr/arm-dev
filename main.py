@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 import time
-from src.project_render import project
+from src.project_render import project_grid
 from src.plotly_plots import get_heatmap_data
 from src.projects_data import get_project_df
 from src.footer import footer
@@ -277,9 +277,9 @@ def page_main():
 
 def page_prof_projects():
 
-    c1,c2,c3 = st.columns([1,7,1])
+    c1,c2,c3 = st.columns([1,10,1])
     with c2:
-        
+
         st.header(":material/rocket_launch: Professional Projects")
         st.write("A Glimpse Into My Professional Work")
         st.divider()
@@ -287,14 +287,13 @@ def page_prof_projects():
         with open("./src/projects.json", "r") as file:
             data = json.load(file)
 
-        for i,proj in enumerate(data):
-            project(data[str(i+1)])
+        project_grid(data, "prof")
 
     st.caption("The project descriptions provided on this page are intentionally kept at a high level to protect sensitive information. Specific details, data, and proprietary methods are subject to professional Non-Disclosure Agreements (NDAs) and cannot be publicly shared. The summaries are intended solely to illustrate the nature of my work and experience without disclosing confidential or privileged material.")
 
 def page_freelance_projects():
 
-    c1,c2,c3 = st.columns([1,7,1])
+    c1,c2,c3 = st.columns([1,10,1])
     with c2:
         st.header(":material/diamond_shine: Freelance Projects")
         st.write("An Overview Of My Freelance Work")
@@ -303,13 +302,12 @@ def page_freelance_projects():
         with open("./src/projects_freelance.json", "r") as file:
             data = json.load(file)
 
-        for i,proj in enumerate(data):
-            project(data[str(i+1)])
+        project_grid(data, "free")
 
     st.caption("The project descriptions provided on this page are intentionally kept at a high level to protect sensitive information. Specific details, data, and proprietary methods are subject to professional Non-Disclosure Agreements (NDAs) and cannot be publicly shared. The summaries are intended solely to illustrate the nature of my work and experience without disclosing confidential or privileged material.")
 
 def page_pers_projects():
-    c1,c2,c3 = st.columns([1,7,1])
+    c1,c2,c3 = st.columns([1,10,1])
     with c2:
         st.header(":material/interests: Personal Projects")
         st.write("Some stuff I liked to build")
@@ -318,8 +316,7 @@ def page_pers_projects():
         with open("./src/projects_personal.json", "r") as file:
             data = json.load(file)
 
-        for i,proj in enumerate(data):
-            project(data[str(i+1)])
+        project_grid(data, "pers")
 
 footer()
 
